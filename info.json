@@ -1,0 +1,74 @@
+{
+    "pers": {
+        "name": "Roberto Serra",
+        "nato-il": "10/06/1983",
+        "email": "obi.serra@gmail.com",
+        "github": "https://github.com/obiSerra",
+        "linkedin": "https://www.linkedin.com/in/obiserra/",
+        "mobile": "338-6414351",
+        "jobTitle": "Full Stack Engineer"
+    },
+
+    "summary": "I am a web developer with almost 10 years of experience; during those years I worked as freelance, consultant and employee, having the opportunity to work with startups, creatives collective as well as enterprise companies",
+    "pastJobs": [
+        {
+            "companyName": "Etiqa SRL",
+            "jobTitle": "Senior Software Engineer",
+            "started": "Sept 2014",
+            "ended": "Present",
+            "description": ["Designing and developing enterprise and large scale modern web applications for the US and European market."],
+            "tech": "AngularJS, React, Clojure, RabbitMQ, MongoDb, Jenkins, Groovy"
+        },
+                {
+            "jobTitle": "Full stack developer",
+            "started": "Dec 2008",
+            "ended": "Aug 2014",
+            "description": ["Developer and consultat for web agencies"],
+                   "tech": "Third Party API integration, PHP, JavaScript, HTML5 Canvas"
+        },
+        {
+            "companyName": "Muvobit",
+            "jobTitle": "Web and Mobile Developer",
+            "started": "Jan 2012",
+            "ended": "Aug 2014",
+            "description": ["Developing and designing web applications, mobile app (PhoneGap and Titanium) and HTML5 games. "],
+            "tech": "Yii, PHP, MySQL, Javscript, jQuery"
+        },
+        {
+            "companyName": "Collettivo Wip",
+            "jobTitle": "Co-founder and Developer",
+            "started": "Mar 2010",
+            "ended": "Dec 2011",
+            "description": ["Developing web sites and web application for small and medium companies"],
+            "tech": "WordPress, Joomla, PHP, HTML, CSS, JavaScript"
+        },
+        {
+            "companyName": "Real.co",
+            "jobTitle": "PHP Developer",
+            "started": "Mar 2010",
+            "ended": "Dec 2011",
+            "description": ["Developing and maintaining a live auction web application"],
+            "tech": "PHP, HTML, CSS, JavaScript"
+        }
+
+
+    ],
+    "skills": [
+        "JavaScript, CoffeeScript, ClojureScript, TypeScript",
+        "AngularJS, React, Backbone, Angular4",
+        "PHP, Clojure, Python",
+        "Luminus, MODx, Yii, Laravel",
+        "MySQL, MongoDb",
+        "Git, shell, ssh, Unix, Mac OS",
+        "Good attitude to work with teams",
+        "Good experience as project and team leader"
+    ],
+    "educations": [
+        {
+            "name": "Università degli Studi di Torino",
+            "qualification": "Laura in Scienze Della Comunicazione - Bachelor of Arts in Communication Studies",
+            "when": "2007"
+        }
+    ]
+
+}
