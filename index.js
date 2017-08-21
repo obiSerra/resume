@@ -3,7 +3,7 @@ const handlebars = require('handlebars'),
       pdf = require('html-pdf'),
       RSVP = require('rsvp');
 
-const basePath = 'file:///Users/robertoserra/dev/cv/templates/CV-Template/',
+const basePath = `file://${__dirname}/templates/CV-Template/`,
       fileOut = 'output/Roberto_Serra_CV.pdf',
       templateDir = 'templates/CV-Template/',
       templateFile = 'index.html',
@@ -26,6 +26,8 @@ const readData = new RSVP.Promise((resolve, reject) => {
         resolve(JSON.parse(data));
     });
 });
+
+console.log(basePath)
 
 readData
     .then(data => {
