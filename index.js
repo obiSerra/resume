@@ -20,45 +20,53 @@ const htmlOutput = (html) => {
     });
 };
 
-const readData = new RSVP.Promise((resolve, reject) => {
-    fs.readFile(dataFile, 'utf8', function (error, data) {
-        if (error) reject(error);
-        resolve(JSON.parse(data));
+async function readData () {
+    return new RSVP.Promise((resolve, reject) => {
+        fs.readFile(dataFile, 'utf8', function (error, data) {
+            if (error) reject(error);
+            resolve(JSON.parse(data));
+        });
     });
-});
+}
 
-console.log(basePath)
-
-readData
-    .then(data => {
-        console.log('[+] Reading template');
-        return new RSVP.Promise((resolve, reject) => {
-            fs.readFile(templateDir + templateFile, 'utf-8', function(error, source) {
-                if (error) reject(error);
-                const  template = handlebars.compile(source);
-                resolve(template(data));
-            });
+async function readTemplate (data) {
+    console.log('[+] Parsing template');
+    return new RSVP.Promise((resolve, reject) => {
+        fs.readFile(templateDir + templateFile, 'utf-8', function(error, source) {
+            if (error) reject(error);
+            const  template = handlebars.compile(source);
+            resolve(template(data));
         });
-    })
-    .then(function(html) {
-        const options = { format: 'A4',
-                          base: basePath,
-                          timeout: 30000
-                        };
-        htmlOutput(html);
+    });
+}
 
+async function generateOutput (html) {
+    const options = { format: 'A4', base: basePath, timeout: 30000 };
 
-        assets.forEach(ast => fs.createReadStream(templateDir + ast).pipe(fs.createWriteStream('output/' + ast)));
-
-        console.log('[+] Generating PDF');
-        return new RSVP.Promise((resolve, reject) => {
-            pdf.create(html, options).toFile(fileOut, (error, res) => {
-                if (error) reject(error);
-                resolve(res);
-            });
+    htmlOutput(html);
+   
+    assets.forEach(ast => fs.createReadStream(templateDir + ast).pipe(fs.createWriteStream('output/' + ast)));
+    
+    console.log('[+] Generating PDF');
+    return new RSVP.Promise((resolve, reject) => {
+        pdf.create(html, options).toFile(fileOut, (error, res) => {
+            if (error) reject(error);
+            resolve(res);
         });
-    })
-    .then(res => {
+    });    
+}
+
+async function parseData () {
+    try {
+        const data = await readData();
+        const html = await readTemplate(data);
+        const res = await generateOutput(html);
+
         console.log(`[+] Done ${res.filename}`);
-    })
-    .catch(error => console.log(error));
+    } catch (e) {
+        console.log(e);
+    }
+}
+
+
+parseData();
