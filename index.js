@@ -12,27 +12,46 @@ const basePath = `file://${__dirname}/templates/CV-Template/`,
 
 
 const htmlOutput = (html) => {
-    var fileName = 'output/index.html';
-    var stream = fs.createWriteStream(fileName);
+    return new Promise ((resolve, reject) => {
+        const fileName = 'output/index.html';
+        const stream = fs.createWriteStream(fileName);
 
-    stream.once('open', function(fd) {
-        stream.end(html);
-    });
+        stream.once('open', () => stream.end(html));
+        stream.on('close', () => resolve());
+    });   
 };
 
-async function readData () {
-    return new RSVP.Promise((resolve, reject) => {
-        fs.readFile(dataFile, 'utf8', function (error, data) {
+function copyAsset (ast) {
+    return new Promise((resolve, reject) => {
+        const rStream = fs.createReadStream(templateDir + ast);
+        const wStream = fs.createWriteStream('output/' + ast);
+        
+        rStream.on('error', error => reject(error));
+        wStream.on('error', error => reject(error));
+
+        wStream.on('close', () => resolve());
+
+        rStream.pipe(wStream);
+
+    });  
+}
+
+function copyAllAssets (asts) {
+    return Promise.all(assets.map(copyAsset));
+}
+
+function readData () {
+    return new Promise((resolve, reject) => {
+        fs.readFile(dataFile, 'utf8', (error, data) => {
             if (error) reject(error);
             resolve(JSON.parse(data));
         });
     });
 }
 
-async function readTemplate (data) {
-    console.log('[+] Parsing template');
-    return new RSVP.Promise((resolve, reject) => {
-        fs.readFile(templateDir + templateFile, 'utf-8', function(error, source) {
+function compileTemplate (data) {
+    return new Promise((resolve, reject) => {
+        fs.readFile(templateDir + templateFile, 'utf-8', (error, source) => {
             if (error) reject(error);
             const  template = handlebars.compile(source);
             resolve(template(data));
@@ -40,15 +59,9 @@ async function readTemplate (data) {
     });
 }
 
-async function generateOutput (html) {
+function pdfOutput (html) {
     const options = { format: 'A4', base: basePath, timeout: 30000 };
-
-    htmlOutput(html);
-   
-    assets.forEach(ast => fs.createReadStream(templateDir + ast).pipe(fs.createWriteStream('output/' + ast)));
-    
-    console.log('[+] Generating PDF');
-    return new RSVP.Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
         pdf.create(html, options).toFile(fileOut, (error, res) => {
             if (error) reject(error);
             resolve(res);
@@ -56,11 +69,18 @@ async function generateOutput (html) {
     });    
 }
 
-async function parseData () {
+async function run () {
     try {
+        
         const data = await readData();
-        const html = await readTemplate(data);
-        const res = await generateOutput(html);
+        console.log('[+] Compiling the template');
+        const html = await compileTemplate(data);
+
+        htmlOutput(html);
+        console.log('[+] Copy assets');         
+        await copyAllAssets(assets);
+        console.log('[+] Generating PDF');
+        const res = await pdfOutput(html);
 
         console.log(`[+] Done ${res.filename}`);
     } catch (e) {
@@ -69,4 +89,4 @@ async function parseData () {
 }
 
 
-parseData();
+run();
