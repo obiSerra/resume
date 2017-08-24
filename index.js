@@ -80,9 +80,9 @@ async function run () {
         console.log('[+] Copy assets');         
         await copyAllAssets(assets);
         console.log('[+] Generating PDF');
-        const res = await pdfOutput(html);
+//        const res = await pdfOutput(html);
 
-        console.log(`[+] Done ${res.filename}`);
+//        console.log(`[+] Done ${res.filename}`);
     } catch (e) {
         console.log(e);
     }

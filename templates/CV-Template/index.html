@@ -67,6 +67,17 @@
 			    <p>{{this}}</p>
                             {{/each}}
 
+                            {{#if projects}}
+                            <p class="work-project">
+                            Worked on:
+                            <ul>
+                              {{#each projects}}
+			      <li>{{this}}</li>
+                              {{/each}}
+                            </ul>                           
+                            </p>
+                            {{/if}}
+
                             <p class="tech"><span>Tech:</span> {{tech}}</p>
 			  </article>
 
