@@ -10,6 +10,13 @@
     },
 
     "summary": "I am a web developer with almost 10 years of experience; during those years I worked as freelance, consultant and employee, having the opportunity to work with startups, creatives collective as well as enterprise companies",
+    "projects": ["An animated interactive youtube masthead for a famous italian fashion house",
+                 "An quote web application for a US assurance company",
+                 "A car configurator for top multinational automotive company",
+                 "A management tool for massive live tournaments for a US gaming company",
+                 "Two multiplatform mobile applications",
+                 "A real time auction web application",
+                "Many web applications for startups "],
     "pastJobs": [
         {
             "companyName": "Etiqa SRL",
@@ -17,17 +24,12 @@
             "started": "Sept 2014",
             "ended": "Present",
             "description": ["Designing and developing enterprise and large scale modern web applications for the US and European market."],
-            "projects": ["An quote web application for a US assurance company",
-                         "A car configurator for top multinational automotive company",
-                         "A management tool for massive live tournaments for a US gaming company"],
             "tech": "AngularJS, React, Clojure, RabbitMQ, MongoDb, Jenkins, Groovy"
         },
                 {
                     "jobTitle": "Full stack developer",
                     "started": "Dec 2008",
                     "ended": "Aug 2014",
-                   "projects": ["An animated interactive youtube masthead for a famous italian fashion house",
-                                 "A sharing platform for a startup"],
                     "description": ["Developer and consultat for web agencies"],
                     "tech": "Third Party API integration, PHP, JavaScript, HTML5 Canvas"
                 },
@@ -37,7 +39,6 @@
             "started": "Jan 2012",
             "ended": "Aug 2014",
             "description": ["Developing and designing web applications, mobile app (PhoneGap and Titanium) and HTML5 games."],
-            "projects": ["Two multiplatform mobile applications"],
             "tech": "Yii, PHP, MySQL, Javscript, jQuery"
         },
         {
@@ -54,7 +55,7 @@
             "started": "Mar 2010",
             "ended": "Dec 2011",
             "description": ["Developing and maintaining a live auction web application"],
-            "projects": ["A real time auction web application"],
+            "projects": [],
             "tech": "PHP, HTML, CSS, JavaScript"
         }
 
@@ -62,11 +63,11 @@
     ],
     "skills": [
         "JavaScript, CoffeeScript, ClojureScript, TypeScript",
+        "PHP, Clojure, Python, Bash Script",
         "AngularJS, React, Backbone, Angular4",
-        "PHP, Clojure, Python",
         "Luminus, MODx, Yii, Laravel",
         "MySQL, MongoDb",
-        "Git, shell, ssh, Unix, Mac OS",
+        "Git, bash, ssh, Unix, Jenkins, CI",
         "Good attitude to work with teams",
         "Good experience as project and team leader"
     ],

@@ -18,14 +18,14 @@ const htmlOutput = (html) => {
 
         stream.once('open', () => stream.end(html));
         stream.on('close', () => resolve());
-    });   
+    });
 };
 
 function copyAsset (ast) {
     return new Promise((resolve, reject) => {
         const rStream = fs.createReadStream(templateDir + ast);
         const wStream = fs.createWriteStream('output/' + ast);
-        
+
         rStream.on('error', error => reject(error));
         wStream.on('error', error => reject(error));
 
@@ -33,7 +33,7 @@ function copyAsset (ast) {
 
         rStream.pipe(wStream);
 
-    });  
+    });
 }
 
 function copyAllAssets (asts) {
@@ -66,27 +66,25 @@ function pdfOutput (html) {
             if (error) reject(error);
             resolve(res);
         });
-    });    
+    });
 }
 
 async function run () {
     try {
-        
+
         const data = await readData();
         console.log('[+] Compiling the template');
         const html = await compileTemplate(data);
 
         htmlOutput(html);
-        console.log('[+] Copy assets');         
+        console.log('[+] Copy assets');
         await copyAllAssets(assets);
         console.log('[+] Generating PDF');
-//        const res = await pdfOutput(html);
-
-//        console.log(`[+] Done ${res.filename}`);
+        const res = await pdfOutput(html);
+        console.log(`[+] Done ${res.filename}`);
     } catch (e) {
         console.log(e);
     }
 }
-
 
 run();

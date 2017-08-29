@@ -39,53 +39,56 @@
 
     <div id="mainArea" class="quickFade delayFive">
 		<section>
-			<article>
-				<div class="sectionTitle">
-					<h1>Personal Profile</h1>
-				</div>
-
-				<div class="sectionContent">
-					<p>{{summary}}</p>
-				</div>
-			</article>
-			<div class="clear"></div>
-		</section>
-
-
-		<section>
+		    <article>
 			<div class="sectionTitle">
-				<h1>Work Experience</h1>
+			    <h1>Personal Profile</h1>
 			</div>
 
 			<div class="sectionContent">
+			    <p>{{summary}}</p>
+			</div>
+		    </article>
+		    <div class="clear"></div>
+		</section>
 
-                          {{#each pastJobs}}
-			  <article>
+		<section>
+		    <div class="sectionTitle">
+			<h1>Work Experience</h1>
+		    </div>
+
+		    <div class="sectionContent">
+
+                        {{#each pastJobs}}
+			<article>
 			    <h2>{{jobTitle}}</h2>
 			    <p class="subDetails">{{started}} - {{ended}}</p>
                             {{#each description}}
 			    <p>{{this}}</p>
                             {{/each}}
-
-                            {{#if projects}}
-                            <p class="work-project">
-                            Worked on:
-                            <ul>
-                              {{#each projects}}
-			      <li>{{this}}</li>
-                              {{/each}}
-                            </ul>                           
-                            </p>
-                            {{/if}}
-
                             <p class="tech"><span>Tech:</span> {{tech}}</p>
-			  </article>
+			</article>
 
-                          {{/each}}
+                        {{/each}}
 
 			</div>
 			<div class="clear"></div>
 		</section>
+                <section>
+                    <div class="sectionTitle">
+                        <h1>Notable Projects</h1>
+                    </div>
+
+                    <div class="sectionContent">
+                        <p>
+                            <ul class="notable-projects">
+                                {{#each projects}}
+			        <li>{{this}}</li>
+                                {{/each}}
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="clear"></div>
+                </section>
 		<section>
 		  <div class="sectionTitle">
 		    <h1>Key Skills</h1>

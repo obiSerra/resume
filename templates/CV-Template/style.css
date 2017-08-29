@@ -13,6 +13,12 @@ display:block;
 
 html, body {background: #fff; font-family: 'Lato', helvetica, arial, sans-serif; font-size: 14px; color: #222;}
 
+@media print {
+
+    html, body {background: #fff; font-family: 'Lato', helvetica, arial, sans-serif; font-size: 12px; color: #222;}
+
+}
+
 .clear {clear: both;}
 
 p {
@@ -113,12 +119,12 @@ section:last-child {
 
 .sectionTitle {
 	float: left;
-	width: 25%;
+	width: 15%;
 }
 
 .sectionContent {
 	float: right;
-	width: 72.5%;
+	width: 82%;
 }
 
 .sectionTitle h1 {
@@ -131,24 +137,26 @@ section:last-child {
 .sectionContent h2 {
 	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
 	font-size: 1.2em;
-        line-height: 1.5em
+        line-height: 1.5em;
 	margin-bottom: -2px;
 }
 
 .subDetails {
 	font-size: 0.8em;
 	font-style: italic;
-	margin-bottom: 3px;      
+	margin-bottom: 3px;
 }
 
-.work-project ul {
-    list-style: none;
+.notable-projects {
+    list-style: square;
+    padding-left: 18px;
 }
 
-.work-project li {
-    margin-left: 10px;
+.notable-projects li {
+    line-height: 1;
     font-size: 0.8em;
 }
+
 
 .keySkills {
 	list-style-type: none;
