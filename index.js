@@ -1,7 +1,6 @@
 const handlebars = require('handlebars'),
       fs = require('fs'),
-      pdf = require('html-pdf'),
-      RSVP = require('rsvp');
+      pdf = require('html-pdf');
 
 const basePath = `file://${__dirname}/templates/CV-Template/`,
       fileOut = 'output/Roberto_Serra_CV.pdf',
@@ -28,11 +27,8 @@ function copyAsset (ast) {
 
         rStream.on('error', error => reject(error));
         wStream.on('error', error => reject(error));
-
         wStream.on('close', () => resolve());
-
         rStream.pipe(wStream);
-
     });
 }
 
@@ -40,9 +36,9 @@ function copyAllAssets (asts) {
     return Promise.all(assets.map(copyAsset));
 }
 
-function readData () {
+function readData (file) {
     return new Promise((resolve, reject) => {
-        fs.readFile(dataFile, 'utf8', (error, data) => {
+        fs.readFile(file, 'utf8', (error, data) => {
             if (error) reject(error);
             resolve(JSON.parse(data));
         });
@@ -72,7 +68,7 @@ function pdfOutput (html) {
 async function run () {
     try {
 
-        const data = await readData();
+        const data = await readData(dataFile);
         console.log('[+] Compiling the template');
         const html = await compileTemplate(data);
 
