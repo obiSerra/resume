@@ -9,36 +9,29 @@
         "jobTitle": "Full Stack Engineer"
     },
 
-    "summary": "I am a web developer with almost 10 years of experience; during those years I worked as freelance, consultant and employee, having the opportunity to work with startups, creatives collective as well as enterprise companies",
-    "projects": ["An animated interactive youtube masthead for a famous italian fashion house",
-                 "An quote web application for a US assurance company",
-                 "A car configurator for top multinational automotive company",
-                 "A management tool for massive live tournaments for a US gaming company",
-                 "Two multiplatform mobile applications",
-                 "A real time auction web application",
-                "Many web applications for startups "],
+    "summary": "I am a web developer with near 10 years of experience; during those years I worked as a freelance, consultant and employee, having the opportunity to work with startups as wellas creatives collective and enterprise companies",
     "pastJobs": [
         {
             "companyName": "Etiqa SRL",
             "jobTitle": "Senior Software Engineer",
             "started": "Sept 2014",
             "ended": "Present",
-            "description": ["Designing and developing enterprise and large scale modern web applications for the US and European market."],
+            "description": ["Designing and developing enterprise and large scale modern web applications for the US and European markets."],
             "tech": "AngularJS, React, Clojure, RabbitMQ, MongoDb, Jenkins, Groovy"
         },
-                {
-                    "jobTitle": "Full stack developer",
-                    "started": "Dec 2008",
-                    "ended": "Aug 2014",
-                    "description": ["Developer and consultat for web agencies"],
-                    "tech": "Third Party API integration, PHP, JavaScript, HTML5 Canvas"
-                },
+        {
+            "jobTitle": "Full Stack Developer",
+            "started": "Dec 2008",
+            "ended": "Aug 2014",
+            "description": ["Developer and consultat for web agencies"],
+            "tech": "Third Party API integration, PHP, JavaScript, HTML5 Canvas"
+        },
         {
             "companyName": "Muvobit",
             "jobTitle": "Web and Mobile Developer",
             "started": "Jan 2012",
             "ended": "Aug 2014",
-            "description": ["Developing and designing web applications, mobile app (PhoneGap and Titanium) and HTML5 games."],
+            "description": ["Developing and designing web applications, mobile apps (PhoneGap and Titanium) and HTML5 games."],
             "tech": "Yii, PHP, MySQL, Javscript, jQuery"
         },
         {
@@ -46,7 +39,7 @@
             "jobTitle": "Co-founder and Developer",
             "started": "Mar 2010",
             "ended": "Dec 2011",
-            "description": ["Developing web sites and web application for small and medium companies"],
+            "description": ["Developing web sites and web applications for small and medium sized companies"],
             "tech": "WordPress, Joomla, PHP, HTML, CSS, JavaScript"
         },
         {
@@ -58,9 +51,15 @@
             "projects": [],
             "tech": "PHP, HTML, CSS, JavaScript"
         }
-
-
     ],
+    "projects": ["An animated interactive YouTube Masthead for a famous italian fashion house",
+                 "A quoting web application for a US assurance company",
+                 "A car configurator for top a multinational automotive company",
+                 "A management tool for massive live tournaments for a US gaming company",
+                 "Two multiplatform mobile applications",
+                 "A real time auction web application",
+                 "Many web applications for startups "
+                ],
     "skills": [
         "JavaScript, CoffeeScript, ClojureScript, TypeScript",
         "PHP, Clojure, Python, Bash Script",
@@ -74,7 +73,7 @@
     "educations": [
         {
             "name": "Università degli Studi di Torino",
-            "qualification": "Laura in Scienze Della Comunicazione - Bachelor of Arts in Communication Studies",
+            "qualification": "Laurea in Scienze Della Comunicazione - Bachelor of Arts in Communication Studies",
             "when": "2007"
         }
     ]
