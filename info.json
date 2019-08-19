@@ -17,7 +17,7 @@
             "started": "Sept 2014",
             "ended": "Present",
             "description": ["Designing and developing enterprise and large scale modern web applications for the US and European markets."],
-            "tech": "AngularJS, React, Clojure, RabbitMQ, MongoDb, Jenkins, Groovy"
+            "tech": "React, JavaScript, Clojure, RabbitMQ, MongoDb, Jenkins, C#"
         },
         {
             "jobTitle": "Full Stack Developer",
@@ -32,7 +32,7 @@
             "started": "Jan 2012",
             "ended": "Aug 2014",
             "description": ["Developing and designing web applications, mobile apps (PhoneGap and Titanium) and HTML5 games."],
-            "tech": "Yii, PHP, MySQL, Javscript, jQuery"
+            "tech": "Yii, PHP, MySQL, JavaScript, jQuery"
         },
         {
             "companyName": "Collettivo Wip",
@@ -62,7 +62,7 @@
                 ],
     "skills": [
         "JavaScript, CoffeeScript, ClojureScript, TypeScript",
-        "PHP, Clojure, Python, Bash Script",
+        "Clojure, C#, PHP, Python, Bash Script",
         "AngularJS, React, Backbone, Angular4",
         "Luminus, MODx, Yii, Laravel",
         "MySQL, MongoDb",
