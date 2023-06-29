@@ -1,81 +1,87 @@
 {
-    "pers": {
-        "name": "Roberto Serra",
-        "nato-il": "10/06/1983",
-        "email": "obi.serra@gmail.com",
-        "github": "https://github.com/obiSerra",
-        "linkedin": "https://www.linkedin.com/in/obiserra/",
-        "mobile": "338-6414351",
-        "jobTitle": "Full Stack Engineer"
+  "pers": {
+    "name": "Roberto Serra",
+    "nato-il": "10/06/1983",
+    "email": "obi.serra@gmail.com",
+    "github": "https://github.com/obiSerra",
+    "linkedin": "https://www.linkedin.com/in/obiserra/",
+    "website": "https://www.rserra.it/",
+    "jobTitle": "Full Stack Engineer"
+  },
+
+  "summary": "I am a web developer with near 15 years of experience; during those years I worked as a freelance, consultant and employee, having the opportunity to work with startups as well as creatives collective and enterprise companies",
+  "pastJobs": [
+    {
+      "companyName": "Etiqa SRL",
+      "jobTitle": "Tech Lead and Senior Software Engineer",
+      "started": "Sept 2014",
+      "ended": "Present",
+      "description": [
+        "Designing and developing enterprise and large scale modern web applications for the US and European markets."
+      ],
+      "tech": "React, JavaScript, TypeScript, Python, Clojure, RabbitMQ, MongoDb, Jenkins, C#, AWS"
     },
-
-    "summary": "I am a web developer with near 10 years of experience; during those years I worked as a freelance, consultant and employee, having the opportunity to work with startups as wellas creatives collective and enterprise companies",
-    "pastJobs": [
-        {
-            "companyName": "Etiqa SRL",
-            "jobTitle": "Senior Software Engineer",
-            "started": "Sept 2014",
-            "ended": "Present",
-            "description": ["Designing and developing enterprise and large scale modern web applications for the US and European markets."],
-            "tech": "React, JavaScript, Clojure, RabbitMQ, MongoDb, Jenkins, C#"
-        },
-        {
-            "jobTitle": "Full Stack Developer",
-            "started": "Dec 2008",
-            "ended": "Aug 2014",
-            "description": ["Developer and consultat for web agencies"],
-            "tech": "Third Party API integration, PHP, JavaScript, HTML5 Canvas"
-        },
-        {
-            "companyName": "Muvobit",
-            "jobTitle": "Web and Mobile Developer",
-            "started": "Jan 2012",
-            "ended": "Aug 2014",
-            "description": ["Developing and designing web applications, mobile apps (PhoneGap and Titanium) and HTML5 games."],
-            "tech": "Yii, PHP, MySQL, JavaScript, jQuery"
-        },
-        {
-            "companyName": "Collettivo Wip",
-            "jobTitle": "Co-founder and Developer",
-            "started": "Mar 2010",
-            "ended": "Dec 2011",
-            "description": ["Developing web sites and web applications for small and medium sized companies"],
-            "tech": "WordPress, Joomla, PHP, HTML, CSS, JavaScript"
-        },
-        {
-            "companyName": "Real.co",
-            "jobTitle": "PHP Developer",
-            "started": "Mar 2010",
-            "ended": "Dec 2011",
-            "description": ["Developing and maintaining a live auction web application"],
-            "projects": [],
-            "tech": "PHP, HTML, CSS, JavaScript"
-        }
-    ],
-    "projects": ["An animated interactive YouTube Masthead for a famous italian fashion house",
-                 "A quoting web application for a US assurance company",
-                 "A car configurator for top a multinational automotive company",
-                 "A management tool for massive live tournaments for a US gaming company",
-                 "Two multiplatform mobile applications",
-                 "A real time auction web application",
-                 "Many web applications for startups "
-                ],
-    "skills": [
-        "JavaScript, CoffeeScript, ClojureScript, TypeScript",
-        "Clojure, C#, PHP, Python, Bash Script",
-        "AngularJS, React, Backbone, Angular4",
-        "Luminus, MODx, Yii, Laravel",
-        "MySQL, MongoDb",
-        "Git, bash, ssh, Unix, Jenkins, CI",
-        "Good attitude to work with teams",
-        "Good experience as project and team leader"
-    ],
-    "educations": [
-        {
-            "name": "Università degli Studi di Torino",
-            "qualification": "Laurea in Scienze Della Comunicazione - Bachelor of Arts in Communication Studies",
-            "when": "2007"
-        }
-    ]
-
+    {
+      "companyName": "Muvobit",
+      "jobTitle": "Web and Mobile Developer",
+      "started": "Jan 2012",
+      "ended": "Aug 2014",
+      "description": [
+        "Developing and designing web applications, mobile apps (PhoneGap and Titanium) and HTML5 games."
+      ],
+      "tech": "Yii, PHP, MySQL, JavaScript, jQuery, HTML5 Canvas"
+    },
+    {
+      "companyName": "Collettivo Wip",
+      "jobTitle": "Co-founder and Developer",
+      "started": "Mar 2010",
+      "ended": "Dec 2011",
+      "description": ["Developing web sites and web applications for small and medium sized companies"],
+      "tech": "WordPress, Joomla, PHP, HTML, CSS, JavaScript"
+    },
+    {
+      "companyName": "Real.co",
+      "jobTitle": "Web Developer",
+      "started": "Mar 2010",
+      "ended": "Dec 2011",
+      "description": ["Developing and maintaining a live auction web application"],
+      "projects": [],
+      "tech": "PHP, HTML, CSS, JavaScript"
+    }
+  ],
+  "others": [
+    "AI and Machine Learning enthusiast",
+    "Reinforcement Learning applied to board games (Connect 4, Chess) and Unity",
+    "Kaggle competitions",
+    "Algorithms, Coding competitions"
+  ],
+  "projects": [
+    "Taught a NodeJs at Turin University",
+    "An ad-hoc solution for a robotic startup based in San Francisco",
+    "The website for a world wide sport event in 2020",
+    "An animated interactive YouTube Masthead for a famous italian fashion house",
+    "A quoting web application for a US assurance company",
+    "Several car configurators for top a multinational automotive company",
+    "A management tool for massive live tournaments for a US gaming company",
+    "Two multi-platform mobile applications",
+    "A real time auction web application",
+    "Many web applications for startups"
+  ],
+  "skills": [
+    "JavaScript, TypeScript, ClojureScript",
+    "Python, Clojure, C#, PHP, Bash Script",
+    "React, NodeJs, Vue.js Backbone, Angular4",
+    "Pandas, Pytorch, Unity, Unity ML-Agents, Prompt Engineering",
+    "SQL, DynamoDb, MongoDb",
+    "AWS, Git, bash, ssh, Unix, Jenkins, CI",
+    "Great attitude to work with teams",
+    "Very good experience as project and team leader"
+  ],
+  "educations": [
+    {
+      "name": "Università degli Studi di Torino",
+      "qualification": "Laurea in Scienze Della Comunicazione - Bachelor of Arts in Communication Studies",
+      "when": "2007"
+    }
+  ]
 }
