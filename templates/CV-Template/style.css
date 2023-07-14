@@ -113,7 +113,6 @@ body {
 
 p {
   font-size: 0.8em;
-  line-height: 1.2em;
   margin-bottom: 5px;
   color: #444;
 }
@@ -125,8 +124,8 @@ p {
 }
 
 .mainDetails {
-  padding: 25px 35px;
-  border-bottom: 2px solid #cf8a05;
+  padding: 5px 35px;
+  border-bottom: 2px solid #005f6a;
   background: #fff;
 }
 
@@ -191,12 +190,21 @@ a[href^="tel"] {
 }
 
 #contactDetails ul li a:hover {
-  color: #cf8a05;
+  color: #005f6a;
 }
 
 section {
   border-top: 1px solid #dedede;
-  padding: 10px 0 0;
+  padding: 5px 0 0;
+}
+
+@media print {
+  .other-projects-section {
+    margin-top: 10px;
+  }
+  .notable-projects-section {
+    page-break-after: always;
+  }
 }
 
 section:first-child {
@@ -215,13 +223,16 @@ section:last-child {
 .sectionContent {
   float: right;
   width: 82%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .sectionTitle h1 {
   font-family: "Rokkitt", Helvetica, Arial, sans-serif;
   font-style: italic;
   font-size: 1.3em;
-  color: #cf8a05;
+  color: #005f6a;
 }
 
 .sectionContent h2 {
@@ -235,11 +246,14 @@ section:last-child {
   font-size: 0.8em;
   font-style: italic;
   margin-bottom: 3px;
+  position: absolute;
+  top: 5px;
+  left: 70%;
 }
 
 .section-marked-list {
   list-style: square;
-  padding-left: 18px;
+  padding-left: 0;
 }
 
 .section-marked-list li {
@@ -247,6 +261,9 @@ section:last-child {
   font-size: 0.8em;
 }
 
+.job-header {
+  position: relative;
+}
 .keySkills {
   list-style-type: none;
   -moz-column-count: 2;
