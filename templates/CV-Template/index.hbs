@@ -3,11 +3,8 @@
 
 <head>
 	<title>{{pers.name}} - Curriculum Vitae</title>
-
-
 	<meta name="description" content="The Curriculum Vitae of {{pers.name}}." />
 	<meta charset="UTF-8">
-
 	<link type="text/css" rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato|Rokkitt:400,500,600,700,800,900" rel="stylesheet">
 
@@ -54,10 +51,10 @@
 			<section>
 				<article>
 					<div class="sectionTitle">
-						<h1>Personal Profile</h1>
+						<h1>Summary</h1>
 					</div>
 
-					<div class="sectionContent">
+					<div class="sectionContent summary">
 						<p>{{summary}}</p>
 					</div>
 				</article>
@@ -68,60 +65,56 @@
 				<div class="sectionTitle">
 					<h1>Work Experiences</h1>
 				</div>
-
 				<div class="sectionContent">
-
 					{{#each pastJobs}}
 					<article>
-						<h2>{{jobTitle}}</h2>
-						<p class="subDetails">{{started}} - {{ended}}</p>
+						<header class="job-header">
+							<h2>{{jobTitle}}</h2>
+							<span class="subDetails">{{started}} - {{ended}}</span>
+						</header>
 						{{#each description}}
 						<p>{{this}}</p>
 						{{/each}}
-						<p class="tech"><span>Tech:</span> {{tech}}</p>
 					</article>
-
 					{{/each}}
-
 				</div>
 				<div class="clear"></div>
 			</section>
-			<section>
+			<section class="notable-projects-section">
 				<div class="sectionTitle">
 					<h1>Notable Projects</h1>
 				</div>
 
 				<div class="sectionContent">
-					<p>
+					<ul class="notable-projects section-marked-list">
+						{{#each notableProjects}}
+						<article>
+							<h2>{{title}}</h2>
+							{{#each description}}
+							<p>{{this}}</p>
+							{{/each}}
+							<p><span>Tech:</span> <span class="tech">{{tech}}</span></p>
+						</article>
+						{{/each}}
+					</ul>
+				</div>
+				<div class="clear"></div>
+			</section>
+			<section class="other-projects-section">
+				<div class="sectionTitle">
+					<h1>Other Projects</h1>
+				</div>
+
+				<div class="sectionContent">
 					<ul class="notable-projects section-marked-list">
 						{{#each projects}}
 						<li>{{this}}</li>
 						{{/each}}
 					</ul>
-					</p>
 				</div>
 				<div class="clear"></div>
 			</section>
-
-			<section>
-				<div class="sectionTitle">
-					<h1>Other interests</h1>
-				</div>
-
-				<div class="sectionContent">
-					<p>
-					<ul class="other-interests section-marked-list">
-						{{#each others}}
-						<li>{{this}}</li>
-						{{/each}}
-					</ul>
-					</p>
-				</div>
-				<div class="clear"></div>
-			</section>
-
-
-			<section>
+			<section class="key-skills">
 				<div class="sectionTitle">
 					<h1>Key Skills</h1>
 				</div>
@@ -135,7 +128,20 @@
 				</div>
 				<div class="clear"></div>
 			</section>
+			<section>
+				<div class="sectionTitle">
+					<h1>Interests</h1>
+				</div>
 
+				<div class="sectionContent">
+					<ul class="other-interests section-marked-list">
+						{{#each others}}
+						<li>{{this}}</li>
+						{{/each}}
+					</ul>
+				</div>
+				<div class="clear"></div>
+			</section>
 
 			<section>
 				<div class="sectionTitle">
@@ -146,7 +152,7 @@
 					{{#each educations}}
 					<article>
 						<h2>{{name}}</h2>
-						<p class="subDetails">{{qualification}}</p>
+						<p class="">{{qualification}}</p>
 						<p>{{description}}</p>
 					</article>
 					{{/each}}
