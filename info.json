@@ -1,7 +1,8 @@
 {
   "pers": {
     "name": "Roberto Serra",
-    "nato-il": "10/06/1983",
+    "natoIl": "10/06/1983",
+    "basedOn": "Torino, Italy",
     "email": "obi.serra@gmail.com",
     "github": "https://github.com/obiSerra",
     "linkedin": "https://www.linkedin.com/in/obiserra/",
@@ -9,7 +10,10 @@
     "jobTitle": "Full Stack Senior Engineer"
   },
 
-  "summary": "I am a software developer with almost 15 years of experience; during those years I worked as a freelance, consultant and employee, having the opportunity to work with startups as well as creatives collective and enterprise companies",
+  "summary": [
+    "I am a software developer with 15 years of experience, during which I have worked with a wide array of projects, teams, clients, and technologies.",
+    "I'm passionate about creating innovative solutions to complex problems while learning along the way."
+  ],
   "pastJobs": [
     {
       "companyName": "Etiqa SRL",
@@ -17,7 +21,7 @@
       "started": "Sept 2014",
       "ended": "Present",
       "description": [
-        "Designing and developing enterprise and large scale modern web applications for the US and European markets."
+        "Designing and developing enterprise and large-scale modern web applications for the US and European markets."
       ],
       "tech": "React, JavaScript, TypeScript, Python, Clojure, RabbitMQ, MongoDb, Jenkins, C#, AWS"
     },
@@ -27,7 +31,7 @@
       "started": "Jan 2012",
       "ended": "Aug 2014",
       "description": [
-        "Developing and designing web applications, mobile apps (PhoneGap and Titanium) and HTML5 games."
+        "Developing and designing web applications, mobile apps (PhoneGap and Titanium), and HTML5 games."
       ],
       "tech": "Yii, PHP, MySQL, JavaScript, jQuery, HTML5 Canvas"
     },
@@ -36,9 +40,7 @@
       "jobTitle": "Co-founder and Developer",
       "started": "Mar 2010",
       "ended": "Dec 2011",
-      "description": [
-        "Developing web sites and web applications for small and medium sized companies"
-      ],
+      "description": ["Developing web sites and web applications for small and medium-sized companies."],
       "tech": "WordPress, Joomla, PHP, HTML, CSS, JavaScript"
     },
     {
@@ -46,71 +48,82 @@
       "jobTitle": "Web Developer",
       "started": "Mar 2010",
       "ended": "Dec 2011",
-      "description": [
-        "Developing and maintaining a live auction web application"
-      ],
+      "description": ["Developing and maintaining a live auction web application."],
       "projects": [],
       "tech": "PHP, HTML, CSS, JavaScript"
     }
   ],
   "others": [
-    "AI and Machine Learning enthusiast",
-    "Reinforcement Learning applied to board games (Connect 4, Chess) and Unity custom environments",
-    "Kaggle ML competitions",
-    "Algorithms, Coding competitions"
+    "AI and Machine Learning enthusiast (LLM, Reinforcement Learning)",
+    "Unity and HTML5 game development",
+    "Algorithms, coding and ML competitions",
+    "Physical computing with Arduino and Raspberry PI",
+    "Bread and pizza baking, cooking",
+    "Science and history documentaries"
   ],
   "notableProjects": [
     {
-      "title": "Solution Architect and Team Lead for San Francisco based startup",
-      "tech": "Python, AWS, React, Typescript, Software architecture, TDD, Agile, Scrum",
+      "title": "Solution Architect and Team Lead for a San Francisco-based startup",
+      "tech": "Python, AWS Lambda, AWS CloudFormation, Docker, FastApi, React, TypeScript, Software architecture, TDD, Agile, PR-reviews",
       "description": [
-        "Through my dual responsibilities as a Solution Architect and Team Leader, I coordinated the efforts of the engineering team, driving them towards the successful delivery of an ad-hoc solution that met the client's requirements.",
-        "As a Solution Architect, I actively participated in meetings with the startup CEO, my US team counterpart, and other stakeholders to collaboratively design both locally hosted and cloud-based solutions.",
-        "Additionally, as a Team Leader, I employed Agile methodologies to guide and support my team throughout the development process. This involved reviewing Pull Requests, facilitating Test Driving Development, and writing code in Python and TypeScript."
+        "Through my dual responsibilities as a Solution Architect and Team Leader, I coordinated the engineering team's efforts, driving them toward successfully delivering an ad-hoc solution both on the cloud and locally."
       ]
     },
     {
       "title": "Senior full-stack developer for a worldwide sport event",
-      "tech": "C#, JavaScript, CSS, HTML",
+      "tech": "C#, JavaScript, CSS, HTML, Scrum, Cypress",
       "description": [
-        "During my tenure, I contributed to the development of the primary website for a prestigious global sports event scheduled for 2020 (subsequently postponed to 2021).",
-        "Initially, I joined as a senior frontend developer, where I played a crucial role in integrating third-party news feeds, advertising elements, and a multimedia gallery as well providing assistance to fellow team members.",
-        "As my responsibilities expanded, I began working on the backend as well, implemented new website sections, optimizing the indexing and search engine capabilities within the client's proprietary framework."
+        "I contributed to developing the primary website for a prestigious global sports event scheduled for 2020 (subsequently postponed to 2021), working on the front-end, the back-end, and the automation pipelines."
       ]
     },
     {
-      "title": "Full-stack developer for a US assurance company",
-      "tech": "Clojure, JavaScript, RabbitMQ, Jenkins, AngularJs",
+      "title": "Full-stack developer for a US health assurance company",
+      "tech": "Clojure, JavaScript, RabbitMQ, Jenkins, AngularJs, Git",
       "description": [
-        "I worked as full-stack developer on a insurance quoting web application targeted to medium and small business for a Fortune top 10 assurance company, refactoring an old Java monolith application into a micro-services based one, using Clojure, RabbitMQ and Jenkins to increase the maintanibility and the ease of deploy; we also created an ad-hoc git flow to better manage the project."
+        "I worked as a full-stack developer on an insurance quoting web application targeted to medium and small businesses for a Fortune top 10 assurance company, refactoring an old Java monolith application into a micro-services-based one and creating an ad-hoc git flow to increase the maintainability and ease of deployment."
       ]
     },
     {
-      "title": "Interactive YouTube Masthead for an italian fashion brand",
+      "title": "Interactive YouTube Masthead for an Italian fashion brand",
       "tech": "JavaScript, CSS, HTML, Canvas",
-      "description": [
-        "I created an engaging YouTube Masthead that featured an interactive element. This unique masthead presented two versions of the same commercial simultaneously, with one playing on the top half and the other on the bottom. To provide an interactive experience, I implemented a draggable divider line that allowed users to select which video and music they wanted to watch simply by dragging it up and down."
-      ]
+      "description": ["I created a YouTube Masthead with an interactive video optimized for mobile and desktop."]
     }
   ],
   "projects": [
-    "Taught a NodeJs laboratory at Turin University for 2 years",
-    "Several car configurators for top a multinational automotive company",
-    "A management tool for massive live tournaments for a US gaming company",
+    "Taught a NodeJs laboratory at Turin University for two years.",
+    "Several car configurators for a top multinational automotive company",
+    "A management tool for massive live tournaments for a US gaming card company",
     "Two multi-platform mobile applications",
-    "A real time auction web application",
-    "Partecipated to many code challenges such as Js13K, Google Hashcode, Google FooBar"
+    "A real-time auction web application"
   ],
   "skills": [
-    "JavaScript, TypeScript, ClojureScript",
-    "Python, Clojure, C#, PHP, Bash Script",
-    "React, NodeJs, Vue.js, Express.js",
-    "Pandas, Pytorch, Unity, Unity ML-Agents, Prompt Engineering",
-    "DynamoDb, MongoDb, MySQL, PostgreSQL",
-    "Lambda, S3, CloudFormation, Cognito, APIGateway, Google Cloud Provider",
-    "Git, bash, ssh, MacOS, Linux, Jenkins",
-    "Great attitude to work with teams and as team leader",
-    "Good expirience as Solution Design and Tech Lead"
+    [
+      "JavaScript, TypeScript, Python, Clojure, C#, PHP",
+      "React, Redux, NodeJs, Express.js, Jest",
+      "FastApi, Flask, Pydantic, Asyncio, Luminus",
+      "DynamoDb, MongoDb, MySQL, PostgreSQL",
+      "AWS Lambda, S3, CloudFormation, Cognito, APIGateway, AWS SQS, Google Cloud Provider",
+      "Pandas, Pytorch, Unity, Unity ML-Agents, Prompt Engineering",
+      "Git, bash, ssh, MacOS, Linux, Jenkins, Docker, RabbitMQ",
+      "Unit-Testing, TDD, E2E testing, Agile, Jira, PR-reviews"
+    ],
+    [
+      "Very strong communication skills",
+      "Great experience as a team leader and department director",
+      "Excellent problem-solving abilities, capable of finding practical solutions",
+      "Great at adapting to different situations and project requirements",
+      "Quick and eager learner, committed to continuous self-improvement"
+    ]
+  ],
+  "languages": [
+    {
+      "language": "Italian",
+      "level": "Native"
+    },
+    {
+      "language": "English",
+      "level": "Fluent"
+    }
   ],
   "educations": [
     {
