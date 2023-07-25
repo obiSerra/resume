@@ -6,7 +6,11 @@
 	<meta name="description" content="The Curriculum Vitae of {{pers.name}}." />
 	<meta charset="UTF-8">
 	<link type="text/css" rel="stylesheet" href="style.css">
-	<link href="https://fonts.googleapis.com/css?family=Lato|Rokkitt:400,500,600,700,800,900" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Rokkitt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+		rel="stylesheet">
 
 	<!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -26,50 +30,54 @@
 			</div>
 
 			<div id="contactDetails" class="quickFade delayFour">
+				<p class="personalData">
+					{{#if pers.natoIl}}
+					<span class="color-1">Born on:</span> {{pers.natoIl}}
+					{{/if}} <br>
+					<span class="color-1">Based in:</span> {{pers.basedOn}}
+				</p>
 				<ul>
 					{{#if pers.email}}
-					<li>e: <a href="mailto:{{pers.email}}" target="_blank">{{pers.email}}</a></li>
+					<li><span class="color-1">e:</span> <a href="mailto:{{pers.email}}"
+							target="_blank">{{pers.email}}</a></li>
 					{{/if}}
 					{{#if pers.github}}
-					<li>g: <a href="{{pers.github}}">{{pers.github}}</a></li>
+					<li><span class="color-1">g:</span> <a href="{{pers.github}}">{{pers.github}}</a></li>
 					{{/if}}
 					{{#if pers.linkedin}}
-					<li>l: <a href="{{pers.linkedin}}">{{pers.linkedin}}</a></li>
+					<li><span class="color-1">l:</span> <a href="{{pers.linkedin}}">{{pers.linkedin}}</a></li>
 					{{/if}}
 					{{#if pers.mobile}}
-					<li>m: {{pers.mobile}}</li>
+					<li><span class="color-1">m:</span> {{pers.mobile}}</li>
 					{{/if}}
 					{{#if pers.website}}
-					<li>w: <a href="{{pers.website}}">{{pers.website}}</a></li>
+					<li><span class="color-1">w:</span> <a href="{{pers.website}}">{{pers.website}}</a></li>
 					{{/if}}
 				</ul>
+
 			</div>
 			<div class="clear"></div>
 		</div>
 
 		<div id="mainArea" class="quickFade delayFive">
 			<section>
-				<article>
-					<div class="sectionTitle">
-						<h1>Summary</h1>
-					</div>
-
-					<div class="sectionContent summary">
-						<p>{{summary}}</p>
-					</div>
+				<article class="summary">
+					{{#each summary}}
+					<p>{{this}}</p>
+					{{/each}}
 				</article>
 				<div class="clear"></div>
 			</section>
 
 			<section>
 				<div class="sectionTitle">
-					<h1>Work Experiences</h1>
+					<h2>Work Experiences</h2>
 				</div>
 				<div class="sectionContent">
 					{{#each pastJobs}}
 					<article>
 						<header class="job-header">
-							<h2>{{jobTitle}}</h2>
+							<h3>{{jobTitle}}</h3>
 							<span class="subDetails">{{started}} - {{ended}}</span>
 						</header>
 						{{#each description}}
@@ -82,27 +90,25 @@
 			</section>
 			<section class="notable-projects-section">
 				<div class="sectionTitle">
-					<h1>Notable Projects</h1>
+					<h2>Notable Projects</h2>
 				</div>
 
 				<div class="sectionContent">
-					<ul class="notable-projects section-marked-list">
-						{{#each notableProjects}}
-						<article>
-							<h2>{{title}}</h2>
-							{{#each description}}
-							<p>{{this}}</p>
-							{{/each}}
-							<p><span>Tech:</span> <span class="tech">{{tech}}</span></p>
-						</article>
+					{{#each notableProjects}}
+					<article>
+						<h3>{{title}}</h3>
+						{{#each description}}
+						<p>{{this}}</p>
 						{{/each}}
-					</ul>
+						<p><span>+ </span> <span class="tech">{{tech}}</span></p>
+					</article>
+					{{/each}}
 				</div>
 				<div class="clear"></div>
 			</section>
 			<section class="other-projects-section">
 				<div class="sectionTitle">
-					<h1>Other Projects</h1>
+					<h2>Other Projects</h2>
 				</div>
 
 				<div class="sectionContent">
@@ -116,21 +122,25 @@
 			</section>
 			<section class="key-skills">
 				<div class="sectionTitle">
-					<h1>Key Skills</h1>
+					<h2>Key Skills</h2>
 				</div>
 
 				<div class="sectionContent">
-					<ul class="keySkills">
-						{{#each skills}}
+					{{#each skills}}
+					<ul {{#if @first}}class="section-marked-list" {{/if}} {{#unless
+						@first}}class="section-marked-list plus" {{/unless}}>
+						{{#each this}}
 						<li>{{this}}</li>
 						{{/each}}
 					</ul>
+					{{/each}}
+
 				</div>
 				<div class="clear"></div>
 			</section>
 			<section>
 				<div class="sectionTitle">
-					<h1>Interests</h1>
+					<h2>Interests</h2>
 				</div>
 
 				<div class="sectionContent">
@@ -142,16 +152,29 @@
 				</div>
 				<div class="clear"></div>
 			</section>
-
 			<section>
 				<div class="sectionTitle">
-					<h1>Education</h1>
+					<h2>Languages</h2>
 				</div>
 
+				<div class="sectionContent languagesSection">
+					{{#each languages}}
+					<article>
+						<h3>{{language}}</h3>
+						<p class="">{{level}}</p>
+					</article>
+					{{/each}}
+				</div>
+				<div class="clear"></div>
+			</section>
+			<section>
+				<div class="sectionTitle">
+					<h2>Education</h2>
+				</div>
 				<div class="sectionContent">
 					{{#each educations}}
 					<article>
-						<h2>{{name}}</h2>
+						<h3>{{name}}</h3>
 						<p class="">{{qualification}}</p>
 						<p>{{description}}</p>
 					</article>
