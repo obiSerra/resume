@@ -208,15 +208,11 @@ section {
 }
 
 @media print {
-  .personalData {
-    margin: 10px 0;
-  }
-  .notable-projects-section {
+  .page-break {
     page-break-after: always;
   }
-  .other-projects-section {
-    margin-top: 20px;
-    border-top: none;
+  .personalData {
+    margin: 10px 0;
   }
 }
 
@@ -248,7 +244,7 @@ section:first-child {
   font-family: "Rokkitt", Helvetica, Arial, sans-serif;
   font-size: 1.2em;
   line-height: 1.2em;
-  margin: 5px 0 0 0;
+  margin: 10px 0 5px 0;
   /* margin-bottom: -2px; */
   color: #005f6a;
   font-style: italic;

@@ -54,7 +54,7 @@
     }
   ],
   "others": [
-    "AI and Machine Learning enthusiast (LLM, Reinforcement Learning)",
+    "AI and Machine Learning practitioner (LLM, Reinforcement Learning)",
     "Unity and HTML5 game development",
     "Algorithms, coding and ML competitions",
     "Physical computing with Arduino and Raspberry PI",
@@ -67,6 +67,13 @@
       "tech": "Python, AWS Lambda, AWS CloudFormation, Docker, FastApi, React, TypeScript, Software architecture, TDD, Agile, PR-reviews",
       "description": [
         "Through my dual responsibilities as a Solution Architect and Team Leader, I coordinated the engineering team's efforts, driving them toward successfully delivering an ad-hoc solution both on the cloud and locally."
+      ]
+    },
+    {
+      "title": "NodeJS Lab at Turin University",
+      "tech": "Node, Git, JavaScript, TypeScript",
+      "description": [
+        "I  taught a NodeJs laboratory at Turin University for two years. The lessons were aimed at students with basic programming experience and covered several NodeJs aspects, such as use cases, async programming, and unit test."
       ]
     },
     {

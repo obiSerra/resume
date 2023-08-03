@@ -9,7 +9,7 @@ const basePath = `file://${__dirname}/templates/CV-Template/`,
   dataFile = "info.json",
   assets = ["headshot.jpg", "style.css"];
 
-const htmlOutput = (html) => {
+const htmlOutput = html => {
   return new Promise((resolve, reject) => {
     const fileName = "output/index.html";
     const stream = fs.createWriteStream(fileName);
@@ -24,8 +24,8 @@ function copyAsset(ast) {
     const rStream = fs.createReadStream(templateDir + ast);
     const wStream = fs.createWriteStream("output/" + ast);
 
-    rStream.on("error", (error) => reject(error));
-    wStream.on("error", (error) => reject(error));
+    rStream.on("error", error => reject(error));
+    wStream.on("error", error => reject(error));
     wStream.on("close", () => resolve());
     rStream.pipe(wStream);
   });
@@ -44,10 +44,18 @@ function readData(file) {
   });
 }
 
+handlebars.registerHelper("ifThird", function (index, options) {
+  if (index === 2) {
+    return options.fn(this);
+  } else {
+    return options.inverse(this);
+  }
+});
 function compileTemplate(data) {
   return new Promise((resolve, reject) => {
     fs.readFile(templateDir + templateFile, "utf-8", (error, source) => {
       if (error) reject(error);
+
       const template = handlebars.compile(source);
       resolve(template(data));
     });

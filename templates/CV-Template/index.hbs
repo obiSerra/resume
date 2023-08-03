@@ -97,11 +97,21 @@
 					{{#each notableProjects}}
 					<article>
 						<h3>{{title}}</h3>
+
 						{{#each description}}
 						<p>{{this}}</p>
 						{{/each}}
 						<p><span>+ </span> <span class="tech">{{tech}}</span></p>
 					</article>
+
+					{{#ifThird @index}}
+					<br>
+					<br>
+					<br>
+					<br>
+					
+					{{/ifThird}}
+
 					{{/each}}
 				</div>
 				<div class="clear"></div>
