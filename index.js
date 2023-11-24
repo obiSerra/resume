@@ -2,12 +2,14 @@ const handlebars = require("handlebars"),
   fs = require("fs"),
   pdf = require("html-pdf");
 
+const puppeteer = require("puppeteer");
+
 const basePath = `file://${__dirname}/templates/CV-Template/`,
   fileOut = "output/Roberto_Serra_CV.pdf",
   templateDir = "templates/CV-Template/",
   templateFile = "index.hbs",
   dataFile = "info.json",
-  assets = ["headshot.jpg", "style.css"];
+  assets = ["square.png","circle.png", "style.css"];
 
 const htmlOutput = html => {
   return new Promise((resolve, reject) => {
@@ -62,14 +64,32 @@ function compileTemplate(data) {
   });
 }
 
-function pdfOutput(html) {
-  const options = { format: "A4", base: basePath, timeout: 30000 };
-  return new Promise((resolve, reject) => {
-    pdf.create(html, options).toFile(fileOut, (error, res) => {
-      if (error) reject(error);
-      resolve(res);
-    });
+async function pdfOutput(html) {
+  const browser = await puppeteer.launch({ headless: "new" });
+
+  // Create a new page
+  const page = await browser.newPage();
+
+  // Website URL to export as pdf
+  const website_url = "file:///Users/rserra/Develop/resume/output/index.html";
+  await page.goto(website_url, { waitUntil: "networkidle0" });
+  await page.emulateMediaType("screen");
+  const pdf = await page.pdf({
+    path: fileOut,
+    margin: { top: "10px", right: "50px", bottom: "50px", left: "10px" },
+    printBackground: true,
+    format: "A4",
   });
+
+  await browser.close();
+
+  // const options = { format: "A4", base: basePath, timeout: 30000 };
+  // return new Promise((resolve, reject) => {
+  //   pdf.create(html, options).toFile(fileOut, (error, res) => {
+  //     if (error) reject(error);
+  //     resolve(res);
+  //   });
+  // });
 }
 
 async function run() {
@@ -81,9 +101,10 @@ async function run() {
     htmlOutput(html);
     console.log("[+] Copy assets");
     await copyAllAssets(assets);
+    // return;
     console.log("[+] Generating PDF");
-    const res = await pdfOutput(html);
-    console.log(`[+] Done ${res.filename}`);
+    await pdfOutput(html);
+    console.log(`[+] Done `);
   } catch (e) {
     console.log(e);
   }

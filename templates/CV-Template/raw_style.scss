@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: #101010;
+}
+
+.color-1 {
+  color: #0f4c64;
+}
+.main-content {
+  padding: 10px;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  margin-top: 20px;
+  color: #0f4c64;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.company-name {
+  font-style: italic;
+}
+.work-date {
+  font-style: italic;
+}
+.contacts{
+    font-size: 0.8 rem;
+}

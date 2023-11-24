@@ -7,23 +7,34 @@
     "github": "https://github.com/obiSerra",
     "linkedin": "https://www.linkedin.com/in/obiserra/",
     "website": "https://www.rserra.it/",
+    "kaggle": "https://www.kaggle.com/oneobi",
     "jobTitle": "Full Stack Senior Engineer"
   },
 
   "summary": [
-    "I am a software developer with 15 years of experience, during which I have worked with a wide array of projects, teams, clients, and technologies.",
-    "I'm passionate about creating innovative solutions to complex problems while learning."
+    "I am a software engineer with 15 years of experience, during which I have worked with a wide array of projects, teams, clients, and technologies.",
+    "I'm very passionate about technology, especially with Machine Learning and algorithms."
   ],
   "pastJobs": [
     {
-      "companyName": "Etiqa SRL",
-      "jobTitle": "Tech Lead and Senior Software Engineer",
+      "companyName": "Etiqa",
+      "jobTitle": "Director of Technology",
+      "started": "Apr 2023",
+      "ended": "Present",
+      "description": [
+        "Leading 14 Developers and DevOps divided into small teams on multiple projects while providing technical assistance and mentorship."
+      ],
+      "tech": "AWS CloudFormation, System Architecture, Lucid, Docker, TDD, Unit Testing, Docker"
+    },
+    {
+      "companyName": "Etiqa",
+      "jobTitle": "Software Engineer",
       "started": "Sept 2014",
       "ended": "Present",
       "description": [
         "Designing and developing enterprise and large-scale modern web applications for the US and European markets."
       ],
-      "tech": "React, JavaScript, TypeScript, Python, Clojure, RabbitMQ, MongoDb, Jenkins, C#, AWS"
+      "tech": "React, JavaScript, TypeScript, Python, Clojure, RabbitMQ, MongoDb, Jenkins, C#"
     },
     {
       "companyName": "Muvobit",
@@ -36,14 +47,6 @@
       "tech": "Yii, PHP, MySQL, JavaScript, jQuery, HTML5 Canvas"
     },
     {
-      "companyName": "Collettivo Wip",
-      "jobTitle": "Co-founder and Developer",
-      "started": "Mar 2010",
-      "ended": "Dec 2011",
-      "description": ["Developing web sites and web applications for small and medium-sized companies."],
-      "tech": "WordPress, Joomla, PHP, HTML, CSS, JavaScript"
-    },
-    {
       "companyName": "Real.co",
       "jobTitle": "Web Developer",
       "started": "Mar 2010",
@@ -54,6 +57,7 @@
     }
   ],
   "others": [
+    "Taught a NodeJs laboratory at Turin University for two years",
     "AI and Machine Learning practitioner (LLM, Reinforcement Learning)",
     "Unity and HTML5 game development",
     "Algorithms, coding and ML competitions",
@@ -63,7 +67,7 @@
   ],
   "notableProjects": [
     {
-      "title": "Solution Architect and Team Lead for a San Francisco-based startup",
+      "title": "Solution Architect and Team Lead for Multiply Labs a San Francisco-based startup",
       "tech": "Python, AWS Lambda, AWS CloudFormation, Docker, FastApi, React, TypeScript, Software architecture, TDD, Agile, PR-reviews",
       "description": [
         "Through my dual responsibilities as a Solution Architect and Team Leader, I coordinated the engineering team's efforts, driving them toward successfully delivering an ad-hoc solution both on the cloud and locally."
@@ -73,28 +77,35 @@
       "title": "NodeJS Lab at Turin University",
       "tech": "Node, Git, JavaScript, TypeScript",
       "description": [
-        "I  taught a NodeJs laboratory at Turin University for two years. The lessons were aimed at students with basic programming experience and covered several NodeJs aspects, such as use cases, async programming, and unit test."
+        "I taught a NodeJs laboratory at Turin University for two years. The lessons were aimed at students with basic programming experience and covered several NodeJs aspects, such as use cases, async programming, and unit test."
       ]
     },
     {
-      "title": "Senior full-stack developer for a worldwide sport event",
+      "title": "Senior full-stack developer for the 2020 Tokyo Olympics official website",
       "tech": "C#, JavaScript, CSS, HTML, Scrum, Cypress",
       "description": [
-        "I contributed to developing the primary website for a prestigious global sports event scheduled for 2020 (subsequently postponed to 2021), working on the front-end, the back-end, and the automation pipelines."
+        "I contributed to developing the primary website for the 2020 Tokyo Olympics official website, working on the front-end, the back-end, and the automation pipelines."
       ]
     },
     {
-      "title": "Full-stack developer for a US health assurance company",
+      "title": "Full-stack developer for a UHC, a US health assurance company",
       "tech": "Clojure, JavaScript, RabbitMQ, Jenkins, AngularJs, Git",
       "description": [
         "I worked as a full-stack developer on an insurance quoting web application targeted to medium and small businesses for a Fortune top 10 assurance company, refactoring an old Java monolith application into a micro-services-based one and creating an ad-hoc git flow to increase the maintainability and ease of deployment."
       ]
     },
     {
-      "title": "Interactive YouTube Masthead for an Italian fashion brand",
+      "title": "Interactive YouTube Masthead for a Armani Code advertisement",
       "tech": "JavaScript, CSS, HTML, Canvas",
       "description": ["I created a YouTube Masthead with an interactive video optimized for mobile and desktop."]
     }
+  ],
+  "side_projects": [
+    "Taught a NodeJs class at Turin University for two years",
+    "AI and Machine Learning practitioner (LLM, Reinforcement Learning)",
+    "Unity and HTML5 game development",
+    "Algorithms, coding and ML competitions",
+    "Physical computing with Arduino and Raspberry PI"
   ],
   "projects": [
     "Taught a NodeJs laboratory at Turin University for two years.",
@@ -105,14 +116,14 @@
   ],
   "skills": [
     [
-      "JavaScript, TypeScript, Python, Clojure, C#, PHP",
-      "React, Redux, NodeJs, Express.js, Jest",
-      "FastApi, Flask, Pydantic, Asyncio, Luminus",
-      "DynamoDb, MongoDb, MySQL, PostgreSQL",
+      "TypeScript, JavaScript, Python, C#, Clojure, PHP",
+      "FastApi, Pydantic, Asyncio, Pytorch, Pandas, Numpy, Scikit-learn, Matplotlib, Seaborn",
+      "React, Redux, NodeJs, Express.js, Tailwind CSS",
       "AWS Lambda, S3, CloudFormation, Cognito, APIGateway, AWS SQS, Google Cloud Provider",
-      "Pandas, Pytorch, Unity, Unity ML-Agents, Prompt Engineering",
+      "DynamoDb, MongoDb, MySQL, PostgreSQL",
       "Git, bash, ssh, MacOS, Linux, Jenkins, Docker, RabbitMQ",
-      "Unit-Testing, TDD, E2E testing, Agile, Jira, PR-reviews"
+      "Unit-Testing, TDD, E2E testing, Cypress, Jest",
+      "Agile and Scrum, PR-reviews"
     ],
     [
       "Very strong communication skills",
