@@ -2,8 +2,8 @@
 <html>
 
 <head>
-	<title>{{pers.name}} - Curriculum Vitae</title>
-	<meta name="description" content="The Curriculum Vitae of {{pers.name}}." />
+	<title>{{pers.name}} - Resume</title>
+	<meta name="description" content="The Resume of {{pers.name}}." />
 	<meta charset="UTF-8">
 	<link type="text/css" rel="stylesheet" href="style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,183 +17,127 @@
 <![endif]-->
 </head>
 
-<body id="top">
-	<div id="cv" class="instaFade">
-		<div class="mainDetails">
-			<div id="headshot" class="quickFade">
-				<img src="headshot.jpg" alt="{{pers.name}}" />
+<body>
+	<div class="main-content">
+		<header>
+			<div>
+				<h1 class="text-3xl font-bold">{{pers.name}}</h1>
+				<h2 class="text-2xl">{{pers.jobTitle}}</h2>
 			</div>
-
-			<div id="name">
-				<h1 class="">{{pers.name}}</h1>
-				<h2 class="">{{pers.jobTitle}}</h2>
-			</div>
-
-			<div id="contactDetails" class="quickFade delayFour">
-				<p class="personalData">
-					{{#if pers.natoIl}}
-					<span class="color-1">Born on:</span> {{pers.natoIl}}
-					{{/if}} <br>
-					<span class="color-1">Based in:</span> {{pers.basedOn}}
-				</p>
-				<ul>
-					{{#if pers.email}}
-					<li><span class="color-1">e:</span> <a href="mailto:{{pers.email}}"
-							target="_blank">{{pers.email}}</a></li>
-					{{/if}}
-					{{#if pers.github}}
-					<li><span class="color-1">g:</span> <a href="{{pers.github}}">{{pers.github}}</a></li>
-					{{/if}}
-					{{#if pers.linkedin}}
-					<li><span class="color-1">l:</span> <a href="{{pers.linkedin}}">{{pers.linkedin}}</a></li>
-					{{/if}}
-					{{#if pers.mobile}}
-					<li><span class="color-1">m:</span> {{pers.mobile}}</li>
-					{{/if}}
-					{{#if pers.website}}
-					<li><span class="color-1">w:</span> <a href="{{pers.website}}">{{pers.website}}</a></li>
-					{{/if}}
-				</ul>
-
-			</div>
-			<div class="clear"></div>
-		</div>
-
-		<div id="mainArea" class="quickFade delayFive">
-			<section>
-				<article class="summary">
-					{{#each summary}}
-					<p>{{this}}</p>
-					{{/each}}
-				</article>
-				<div class="clear"></div>
-			</section>
-
-			<section>
-				<div class="sectionTitle">
-					<h2>Work Experiences</h2>
+			<div class="grid grid-cols-3 gap-4">
+				<div class="col-span-2">
+					<div class="mt-5">
+						{{#each summary}}
+						<p>{{this}}</p>
+						{{/each}}
+					</div>
 				</div>
-				<div class="sectionContent">
+				<div class="contacts mt-5">
+					<ul>
+						{{#if pers.website}}
+						<li><span class="color-1">w:</span> <a href="{{pers.website}}">{{pers.website}}</a></li>
+						{{/if}}
+
+						{{#if pers.github}}
+						<li><span class="color-1">g:</span> <a href="{{pers.github}}">{{pers.github}}</a></li>
+						{{/if}}
+						{{#if pers.linkedin}}
+						<li><span class="color-1">l:</span> <a href="{{pers.linkedin}}">{{pers.linkedin}}</a></li>
+						{{/if}}
+						{{#if pers.mobile}}
+						<li><span class="color-1">m:</span> {{pers.mobile}}</li>
+						{{/if}}
+						{{#if pers.kaggle}}
+						<li><span class="color-1">k:</span> <a href="{{pers.kaggle}}">{{pers.kaggle}}</a></li>
+						{{/if}}
+					</ul>
+				</div>
+
+			</div>
+
+		</header>
+		<div class="grid grid-cols-3 gap-4">
+			<div class="col-span-2 pr-5">
+				<section class="mt-5">
+					<h3>Work Experiences</h3>
 					{{#each pastJobs}}
-					<article>
-						<header class="job-header">
-							<h3>{{jobTitle}}</h3>
-							<span class="subDetails">{{started}} - {{ended}}</span>
+					<article class="mt-2">
+						<header class="job-header grid grid-cols-3 gap-x-4">
+							<div class="col-span-2 flex">
+								<h4 class="mr-2">{{jobTitle}}</h4>
+								(<span class="at">@</span> <span class="company-name">{{companyName}}</span>)
+							</div>
+							<span class="work-date">{{started}} - {{ended}}</span>
+							
 						</header>
 						{{#each description}}
 						<p>{{this}}</p>
 						{{/each}}
+						<div>
+							<span class="color-1 font-bold italic">Tech:</span>
+							<span class="italic">{{tech}}</span>
+						</div>
 					</article>
 					{{/each}}
-				</div>
-				<div class="clear"></div>
-			</section>
-			<section class="notable-projects-section">
-				<div class="sectionTitle">
-					<h2>Notable Projects</h2>
-				</div>
+				</section>
 
-				<div class="sectionContent">
-					{{#each notableProjects}}
-					<article>
-						<h3>{{title}}</h3>
-
-						{{#each description}}
-						<p>{{this}}</p>
-						{{/each}}
-						<p><span>+ </span> <span class="tech">{{tech}}</span></p>
-					</article>
-
-					{{#ifThird @index}}
-					<br>
-					<br>
-					<br>
-					<br>
-					
-					{{/ifThird}}
-
-					{{/each}}
-				</div>
-				<div class="clear"></div>
-			</section>
-			<section class="other-projects-section">
-				<div class="sectionTitle">
-					<h2>Other Projects</h2>
-				</div>
-
-				<div class="sectionContent">
-					<ul class="notable-projects section-marked-list">
-						{{#each projects}}
+				<section class="mb-2">
+					<h3>Side Projects</h3>
+					<ul>
+						{{#each side_projects}}
 						<li>{{this}}</li>
 						{{/each}}
 					</ul>
-				</div>
-				<div class="clear"></div>
-			</section>
-			<section class="key-skills">
-				<div class="sectionTitle">
-					<h2>Key Skills</h2>
-				</div>
+				</section>
 
-				<div class="sectionContent">
+				<section class="mb-2">
+					<h3>Education</h3>
+					{{#each educations}}
+					<article>
+						<h4>{{name}}</h4>
+						<p class="">{{qualification}}</p>
+						<p>{{description}}</p>
+					</article>
+					{{/each}}
+				</section>
+			</div>
+			<div>
+				<section>
+					<h3>Personal Info</h3>
+					<ul>
+						{{#if pers.email}}
+						<li><span class="font-bold">Email: </span><a href="mailto:{{pers.email}}"
+								target="_blank">{{pers.email}}</a>
+						</li>
+						{{/if}}
+						{{#if pers.natoIl}}
+						<li><span class="font-bold">Born: </span>{{pers.natoIl}}</li>
+						{{/if}}
+						{{#if pers.basedOn}}
+						<li><span class="font-bold">Based on: </span>{{pers.basedOn}}</li>
+						{{/if}}
+					</ul>
+				</section>
+				<section>
+					<h3>Skills</h3>
 					{{#each skills}}
-					<ul {{#if @first}}class="section-marked-list" {{/if}} {{#unless
-						@first}}class="section-marked-list plus" {{/unless}}>
+
+					<ul
+						class="{{#if @first}} list-image-[url(square.png)] {{/if}} {{#unless @first}} list-image-[url(circle.png)] {{/unless}} mb-5">
 						{{#each this}}
 						<li>{{this}}</li>
 						{{/each}}
 					</ul>
 					{{/each}}
+				</section>
 
-				</div>
-				<div class="clear"></div>
-			</section>
-			<section>
-				<div class="sectionTitle">
-					<h2>Interests</h2>
-				</div>
-
-				<div class="sectionContent">
-					<ul class="other-interests section-marked-list">
-						{{#each others}}
-						<li>{{this}}</li>
-						{{/each}}
-					</ul>
-				</div>
-				<div class="clear"></div>
-			</section>
-			<section>
-				<div class="sectionTitle">
-					<h2>Languages</h2>
-				</div>
-
-				<div class="sectionContent languagesSection">
+				<section>
+					<h3>Languages</h3>
 					{{#each languages}}
-					<article>
-						<h3>{{language}}</h3>
-						<p class="">{{level}}</p>
-					</article>
+					<p class="">{{language}} - {{level}}</p>
 					{{/each}}
-				</div>
-				<div class="clear"></div>
-			</section>
-			<section>
-				<div class="sectionTitle">
-					<h2>Education</h2>
-				</div>
-				<div class="sectionContent">
-					{{#each educations}}
-					<article>
-						<h3>{{name}}</h3>
-						<p class="">{{qualification}}</p>
-						<p>{{description}}</p>
-					</article>
-					{{/each}}
-				</div>
-				<div class="clear"></div>
-			</section>
+				</section>
+			</div>
 		</div>
 	</div>
 </body>
-
-</html>
