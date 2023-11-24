@@ -82,14 +82,6 @@ async function pdfOutput(html) {
   });
 
   await browser.close();
-
-  // const options = { format: "A4", base: basePath, timeout: 30000 };
-  // return new Promise((resolve, reject) => {
-  //   pdf.create(html, options).toFile(fileOut, (error, res) => {
-  //     if (error) reject(error);
-  //     resolve(res);
-  //   });
-  // });
 }
 
 async function run() {
