@@ -8,7 +8,7 @@
     "linkedin": "https://linkedin.com/in/obiserra/",
     "website": "https://www.rserra.it/",
     "kaggle": "https://www.kaggle.com/oneobi",
-    "jobTitle": "Full Stack Senior Engineer"
+    "jobTitle": "Senior Software Engineer"
   },
 
   "summary": [
@@ -116,7 +116,7 @@
   ],
   "skills": [
     [
-      "TypeScript, JavaScript, Python, C#, Clojure, PHP",
+      "Python, TypeScript, C#, JavaScript, Clojure, PHP",
       "FastApi, Pydantic, Asyncio, Pytorch, Pandas, Numpy, Scikit-learn, Matplotlib, Seaborn",
       "React, Redux, NodeJs, Express.js, Tailwind CSS",
       "AWS Lambda, S3, CloudFormation, Cognito, APIGateway, AWS SQS, Google Cloud Provider",
