@@ -140,65 +140,71 @@
 			</div>
 		</div>
 	</div>
-	<div class="page-break"> </div>
-	<div class="main-content">	
-		<div>
-			<header>
-				<div>
-					<h1 class="text-3xl font-bold">{{pers.name}}</h1>
-					<h2 class="text-2xl">{{pers.jobTitle}}</h2>
-				</div>
-			</header>
+{{#unless (and flags.noSideProjects flags.noNotableProjects)}}
+<div class="page-break"> </div>
+<div class="main-content">	
+	<div>
+		<header>
 			<div>
-				<section>
-					<h3>Notable Projects</h3>
-					<p>Some notable projects I have worked on</p>
-					{{#each notableProjects}}
-					<article class="mt-5">
-						<header class="">
-							<div class="">
-								<h4 class="mr-2 mb-1">{{title}}</h4>
-							</div>
-						</header>
-						{{#each description}}
-						<p>{{this}}</p>
-						{{/each}}
-						<div>
-							<span class="color-1 font-bold italic">Tech:</span>
-							<span class="italic">{{tech}}</span>
-						</div>
-					</article>
-					{{/each}}
-				</section>
-
-				<section>
-					<h3>Side Projects</h3>
-					<p>Some side projects I am proud of </p>
-					{{#each sideProject}}
-					<article class="mt-5">
-						<header class="">
-							<div class="">
-								<h4 class="mr-2 mb-1">{{title}}</h4>
-							</div>
-						</header>
-						<div>
-							<span class="color-1 font-bold italic">Tech:</span>
-							<span class="italic">{{tech}}</span>
-						</div>
-
-						{{#if urls}}
-						<span>References:</span>
-						<ul>
-							{{#each urls}}
-							<li>{{text}}: <a href="{{url}}">{{url}}</a></li>
-							{{/each}}
-						</ul>
-
-						{{/if}}
-					</article>
-					{{/each}}
-				</section>
+				<h1 class="text-3xl font-bold">{{pers.name}}</h1>
+				<h2 class="text-2xl">{{pers.jobTitle}}</h2>
 			</div>
+		</header>
+		<div>
+			{{#unless flags.noNotableProjects}}
+			<section>
+				<h3>Notable Projects</h3>
+				<p>Some notable projects I have worked on</p>
+				{{#each notableProjects}}
+				<article class="mt-5">
+					<header class="">
+						<div class="">
+							<h4 class="mr-2 mb-1">{{title}}</h4>
+						</div>
+					</header>
+					{{#each description}}
+					<p>{{this}}</p>
+					{{/each}}
+					<div>
+						<span class="color-1 font-bold italic">Tech:</span>
+						<span class="italic">{{tech}}</span>
+					</div>
+				</article>
+				{{/each}}
+			</section>
+			{{/unless}}
+
+			{{#unless flags.noSideProjects}}
+			<section>
+				<h3>Side Projects</h3>
+				<p>Some side projects I am proud of </p>
+				{{#each sideProject}}
+				<article class="mt-5">
+					<header class="">
+						<div class="">
+							<h4 class="mr-2 mb-1">{{title}}</h4>
+						</div>
+					</header>
+					<div>
+						<span class="color-1 font-bold italic">Tech:</span>
+						<span class="italic">{{tech}}</span>
+					</div>
+
+					{{#if urls}}
+					<span>References:</span>
+					<ul>
+						{{#each urls}}
+						<li>{{text}}: <a href="{{url}}">{{url}}</a></li>
+						{{/each}}
+					</ul>
+
+					{{/if}}
+				</article>
+				{{/each}}
+			</section>
+			{{/unless}}
 		</div>
 	</div>
+</div>
+{{/unless}}
 </body>

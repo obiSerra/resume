@@ -4,11 +4,76 @@ const handlebars = require("handlebars"),
 const puppeteer = require("puppeteer");
 
 const basePath = `file://${__dirname}/templates/CV-Template/`,
-  fileOut = "output/Roberto_Serra_CV.pdf",
+  defaultOutputFile = "output/Roberto_Serra_CV.pdf",
   templateDir = "templates/CV-Template/",
   templateFile = "index.hbs",
   dataFile = "info.json",
   assets = ["square.png","circle.png", "style.css"];
+
+// Parse command-line arguments
+const args = process.argv.slice(2);
+const flags = {
+  noSideProjects: args.includes('--no-side-projects'),
+  noNotableProjects: args.includes('--no-notable-projects'),
+  showHelp: args.includes('--help') || args.includes('-h'),
+  outputName: null
+};
+
+// Extract output name if provided
+const outputNameIndex = args.findIndex(arg => arg === '--output-name');
+if (outputNameIndex !== -1 && args[outputNameIndex + 1]) {
+  let outputName = args[outputNameIndex + 1];
+  
+  // Basic filename validation
+  // Prevent path traversal
+  if (outputName.includes('/') || outputName.includes('\\')) {
+    console.error('Error: Output name cannot contain path separators (/ or \\)');
+    process.exit(1);
+  }
+  
+  // Prevent problematic characters
+  if (outputName.includes('..')) {
+    console.error('Error: Output name cannot contain ".."');
+    process.exit(1);
+  }
+  
+  // Length validation
+  if (outputName.length > 200) {
+    console.error('Error: Output name too long (max 200 characters)');
+    process.exit(1);
+  }
+  
+  // Ensure .pdf extension
+  if (!outputName.endsWith('.pdf')) {
+    outputName += '.pdf';
+  }
+  
+  flags.outputName = outputName;
+}
+
+// Display help if requested
+if (flags.showHelp) {
+  console.log(`
+Usage: node index.js [OPTIONS]
+
+Generate a PDF resume from info.json template.
+
+Options:
+  --no-side-projects          Exclude "Side Projects" section from page 2
+  --no-notable-projects       Exclude "Notable Projects" section from page 2
+  --output-name <filename>    Specify output filename (default: Roberto_Serra_CV.pdf)
+  --help, -h                  Display this help message
+
+Examples:
+  node index.js                                          # Generate full 2-page resume
+  node index.js --no-side-projects                       # Exclude side projects
+  node index.js --no-notable-projects                    # Exclude notable projects
+  node index.js --no-side-projects --no-notable-projects # Generate single-page resume
+  node index.js --output-name "John_Doe_Resume.pdf"      # Custom output filename
+  node index.js --output-name "Short_CV" --no-side-projects --no-notable-projects
+  `);
+  process.exit(0);
+}
 
 const htmlOutput = html => {
   return new Promise((resolve, reject) => {
@@ -52,18 +117,27 @@ handlebars.registerHelper("ifThird", function (index, options) {
     return options.inverse(this);
   }
 });
-function compileTemplate(data) {
+
+handlebars.registerHelper("and", function (a, b) {
+  return a && b;
+});
+
+function compileTemplate(data, flags) {
   return new Promise((resolve, reject) => {
     fs.readFile(templateDir + templateFile, "utf-8", (error, source) => {
       if (error) reject(error);
 
       const template = handlebars.compile(source);
-      resolve(template(data));
+      const templateData = {
+        ...data,
+        flags: flags
+      };
+      resolve(template(templateData));
     });
   });
 }
 
-async function pdfOutput(html) {
+async function pdfOutput(html, fileOut) {
   const browser = await puppeteer.launch({
     headless: "new",
     args: ['--no-sandbox', '--disable-setuid-sandbox']
@@ -88,17 +162,21 @@ async function pdfOutput(html) {
 
 async function run() {
   try {
+    // Determine output filename
+    const fileOut = flags.outputName 
+      ? `output/${flags.outputName}` 
+      : defaultOutputFile;
+    
     const data = await readData(dataFile);
     console.log("[+] Compiling the template");
-    const html = await compileTemplate(data);
+    const html = await compileTemplate(data, flags);
 
     htmlOutput(html);
     console.log("[+] Copy assets");
     await copyAllAssets(assets);
-    // return;
     console.log("[+] Generating PDF");
-    await pdfOutput(html);
-    console.log(`[+] Done `);
+    await pdfOutput(html, fileOut);
+    console.log(`[+] Done - PDF saved to: ${fileOut}`);
   } catch (e) {
     console.log(e);
   }

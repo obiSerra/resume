@@ -36,5 +36,8 @@ RUN yarn install --frozen-lockfile
 # Copy project files
 COPY . .
 
-# Compile Tailwind CSS and generate PDF
-CMD ["sh", "-c", "npx tailwindcss -i ./templates/CV-Template/raw_style.scss -o ./templates/CV-Template/style.css && node index.js"]
+# Make entrypoint executable
+RUN chmod +x entrypoint.sh
+
+# Use entrypoint to allow passing arguments
+ENTRYPOINT ["./entrypoint.sh"]

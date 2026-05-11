@@ -10,6 +10,6 @@ docker run --rm \
   --user "$(id -u):$(id -g)" \
   -v "$(pwd)/info.json:/app/info.json:ro" \
   -v "$(pwd)/output:/app/output" \
-  resume-generator
+  resume-generator "$@"
 
-echo "[+] PDF generated at: output/Roberto_Serra_CV.pdf"
+echo "[+] PDF generation complete. Check output/ directory."
