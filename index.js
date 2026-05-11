@@ -1,6 +1,5 @@
 const handlebars = require("handlebars"),
-  fs = require("fs"),
-  pdf = require("html-pdf");
+  fs = require("fs");
 
 const puppeteer = require("puppeteer");
 
@@ -65,13 +64,16 @@ function compileTemplate(data) {
 }
 
 async function pdfOutput(html) {
-  const browser = await puppeteer.launch({ headless: "new" });
+  const browser = await puppeteer.launch({
+    headless: "new",
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  });
 
   // Create a new page
   const page = await browser.newPage();
 
   // Website URL to export as pdf
-  const website_url = "file:///Users/rserra/Develop/resume/output/index.html";
+  const website_url = `file://${__dirname}/output/index.html`;
   await page.goto(website_url, { waitUntil: "networkidle0" });
   await page.emulateMediaType("screen");
   const pdf = await page.pdf({
