@@ -82,15 +82,6 @@
 				</section>
 
 				<section class="mb-2">
-					<h3>Other</h3>
-					<ul>
-						{{#each other}}
-						<li>{{this}}</li>
-						{{/each}}
-					</ul>
-				</section>
-
-				<section class="mb-2">
 					<h3>Education</h3>
 					{{#each educations}}
 					<article>
@@ -191,7 +182,6 @@
 					</div>
 
 					{{#if urls}}
-					<span>References:</span>
 					<ul>
 						{{#each urls}}
 						<li>{{text}}: <a href="{{url}}">{{url}}</a></li>
@@ -199,6 +189,9 @@
 					</ul>
 
 					{{/if}}
+					{{#each description}}
+					<p>{{this}}</p>
+					{{/each}}
 				</article>
 				{{/each}}
 			</section>

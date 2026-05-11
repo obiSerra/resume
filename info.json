@@ -10,21 +10,30 @@
     "kaggle": "https://www.kaggle.com/oneobi",
     "jobTitle": "Senior Software Engineer"
   },
-
   "summary": [
-    "I am a software engineer with 15 years of experience, during which I have worked with a wide array of projects, teams, clients, and technologies.",
-    "I'm very passionate about technology, especially with Machine Learning and algorithms."
+    "I am a Software Engineer/DevOps with more than 15 years of experience, during which I have worked with a wide array of projects, teams, clients, and technologies.",
+    "I'm very passionate about technology, especially with AI, Machine Learning, and algorithms."
   ],
   "pastJobs": [
+    {
+      "companyName": "WaterView",
+      "jobTitle": "Software/MLOps Engineer",
+      "started": "Apr 2024",
+      "ended": "Present",
+      "description": [
+        "Developing, deploying, and maintaining computer vision AI-powered pipelines on IoT devices and distributed systems."
+      ],
+      "tech": "Python, Docker, AWS GreenGrass, Ansible, Linux, Pandas, OpenCv"
+    },
     {
       "companyName": "Etiqa",
       "jobTitle": "Director of Technology",
       "started": "Apr 2023",
-      "ended": "Present",
+      "ended": "Apr 2024",
       "description": [
         "Leading 14 Developers and DevOps divided into small teams on multiple projects while providing technical assistance and mentorship."
       ],
-      "tech": "AWS CloudFormation, System Architecture, Lucid, Docker, TDD, Unit Testing, Docker"
+      "tech": "AWS CloudFormation, System Architecture, Lucid, Docker, TDD, Unit Testing"
     },
     {
       "companyName": "Etiqa",
@@ -42,7 +51,7 @@
       "started": "Jan 2012",
       "ended": "Aug 2014",
       "description": [
-        "Developing and designing web applications, mobile apps (PhoneGap and Titanium), and HTML5 games."
+        "Developing and designing web applications, mobile apps, and HTML5 games."
       ],
       "tech": "Yii, PHP, MySQL, JavaScript, jQuery, HTML5 Canvas"
     },
@@ -51,7 +60,9 @@
       "jobTitle": "Web Developer",
       "started": "Mar 2010",
       "ended": "Dec 2011",
-      "description": ["Developing and maintaining a live auction web application."],
+      "description": [
+        "Developing and maintaining a live auction web application."
+      ],
       "projects": [],
       "tech": "PHP, HTML, CSS, JavaScript"
     }
@@ -62,13 +73,6 @@
       "tech": "Python, AWS Lambda, AWS CloudFormation, Docker, FastApi, React, TypeScript, Software architecture, TDD, Agile, PR-reviews",
       "description": [
         "Through my dual responsibilities as a Solution Architect and Team Leader, I coordinated the engineering team's efforts, driving them toward successfully delivering an ad-hoc solution on the cloud and on-premise hardware."
-      ]
-    },
-    {
-      "title": "NodeJS Lab at Turin University",
-      "tech": "Node, Git, JavaScript, TypeScript",
-      "description": [
-        "I taught a NodeJs laboratory at Turin University for two years. The lessons were aimed at students with basic programming experience and covered several NodeJs aspects, such as use cases, async programming, and unit tests."
       ]
     },
     {
@@ -88,10 +92,19 @@
     {
       "title": "Interactive YouTube Masthead for a Armani Code advertisement",
       "tech": "JavaScript, CSS, HTML, Canvas",
-      "description": ["I created a YouTube Masthead with an interactive video optimized for mobile and desktop."]
+      "description": [
+        "I created a YouTube Masthead with an interactive video optimized for mobile and desktop."
+      ]
     }
   ],
   "sideProject": [
+    {
+      "title": "NodeJS Lab at Turin University",
+      "tech": "Node, Git, JavaScript, TypeScript",
+      "description": [
+        "I taught a NodeJs laboratory at Turin University for two years. The lessons were aimed at students with basic programming experience and covered several NodeJs aspects, such as use cases, async programming, and unit tests."
+      ]
+    },
     {
       "title": "A small scriptable keyboard created with a 3d Printer and an Arduino Micro Pro",
       "tech": "C++, Arduino, 3dPrinting",
@@ -112,13 +125,6 @@
         }
       ]
     }
-  ],
-  "other": [
-    "Taught a NodeJs class at Turin University for two years",
-    "AI and Machine Learning practitioner (LLM, Reinforcement Learning)",
-    "Unity and HTML5 game development",
-    "Algorithms, coding and ML competitions",
-    "Physical computing with Arduino and Raspberry PI"
   ],
   "skills": [
     [
