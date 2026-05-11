@@ -14,11 +14,8 @@
     "license": "MIT",
     "dependencies": {
         "handlebars": "^4.0.10",
-        "html-pdf": "^2.1.0",
         "puppeteer": "^21.5.2",
-        "rsvp": "^3.6.1"
-    },
-    "devDependencies": {
+        "rsvp": "^3.6.1",
         "tailwindcss": "^3.3.5"
     }
 }

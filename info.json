@@ -10,21 +10,30 @@
     "kaggle": "https://www.kaggle.com/oneobi",
     "jobTitle": "Senior Software Engineer"
   },
-
   "summary": [
-    "I am a software engineer with 15 years of experience, during which I have worked with a wide array of projects, teams, clients, and technologies.",
-    "I'm very passionate about technology, especially with Machine Learning and algorithms."
+    "I am a Software Engineer/DevOps with more than 15 years of experience, during which I have worked with a wide array of projects, teams, clients, and technologies.",
+    "I'm very passionate about technology, especially with AI, Machine Learning, and algorithms."
   ],
   "pastJobs": [
+    {
+      "companyName": "WaterView",
+      "jobTitle": "Software/MLOps Engineer",
+      "started": "Apr 2024",
+      "ended": "Present",
+      "description": [
+        "Developing, deploying, and maintaining computer vision AI-powered pipelines on IoT devices and distributed systems."
+      ],
+      "tech": "Python, Docker, AWS GreenGrass, Ansible, Linux, Pandas, OpenCv"
+    },
     {
       "companyName": "Etiqa",
       "jobTitle": "Director of Technology",
       "started": "Apr 2023",
-      "ended": "Present",
+      "ended": "Apr 2024",
       "description": [
         "Leading 14 Developers and DevOps divided into small teams on multiple projects while providing technical assistance and mentorship."
       ],
-      "tech": "AWS CloudFormation, System Architecture, Lucid, Docker, TDD, Unit Testing, Docker"
+      "tech": "AWS CloudFormation, System Architecture, Lucid, Docker, TDD, Unit Testing"
     },
     {
       "companyName": "Etiqa",
@@ -42,7 +51,7 @@
       "started": "Jan 2012",
       "ended": "Aug 2014",
       "description": [
-        "Developing and designing web applications, mobile apps (PhoneGap and Titanium), and HTML5 games."
+        "Developing and designing web applications, mobile apps, and HTML5 games."
       ],
       "tech": "Yii, PHP, MySQL, JavaScript, jQuery, HTML5 Canvas"
     },
@@ -51,79 +60,82 @@
       "jobTitle": "Web Developer",
       "started": "Mar 2010",
       "ended": "Dec 2011",
-      "description": ["Developing and maintaining a live auction web application."],
+      "description": [
+        "Developing and maintaining a live auction web application."
+      ],
       "projects": [],
       "tech": "PHP, HTML, CSS, JavaScript"
     }
   ],
-  "others": [
-    "Taught a NodeJs laboratory at Turin University for two years",
-    "AI and Machine Learning practitioner (LLM, Reinforcement Learning)",
-    "Unity and HTML5 game development",
-    "Algorithms, coding and ML competitions",
-    "Physical computing with Arduino and Raspberry PI",
-    "Bread and pizza baking, cooking",
-    "Science and history documentaries"
-  ],
   "notableProjects": [
     {
-      "title": "Solution Architect and Team Lead for Multiply Labs a San Francisco-based startup",
+      "title": "Solution Architect and Team Lead for Multiply Labs, a San Francisco-based robot startup",
       "tech": "Python, AWS Lambda, AWS CloudFormation, Docker, FastApi, React, TypeScript, Software architecture, TDD, Agile, PR-reviews",
       "description": [
-        "Through my dual responsibilities as a Solution Architect and Team Leader, I coordinated the engineering team's efforts, driving them toward successfully delivering an ad-hoc solution both on the cloud and locally."
-      ]
-    },
-    {
-      "title": "NodeJS Lab at Turin University",
-      "tech": "Node, Git, JavaScript, TypeScript",
-      "description": [
-        "I taught a NodeJs laboratory at Turin University for two years. The lessons were aimed at students with basic programming experience and covered several NodeJs aspects, such as use cases, async programming, and unit test."
+        "Through my dual responsibilities as a Solution Architect and Team Leader, I coordinated the engineering team's efforts, driving them toward successfully delivering an ad-hoc solution on the cloud and on-premise hardware."
       ]
     },
     {
       "title": "Senior full-stack developer for the 2020 Tokyo Olympics official website",
       "tech": "C#, JavaScript, CSS, HTML, Scrum, Cypress",
       "description": [
-        "I contributed to developing the primary website for the 2020 Tokyo Olympics official website, working on the front-end, the back-end, and the automation pipelines."
+        "I contributed to developing the 2020 Tokyo Olympics official website, working on the front-end, back-end, and automation pipelines."
       ]
     },
     {
-      "title": "Full-stack developer for a UHC, a US health assurance company",
+      "title": "Senior full-stack developer for a UnitedHealth Group service",
       "tech": "Clojure, JavaScript, RabbitMQ, Jenkins, AngularJs, Git",
       "description": [
-        "I worked as a full-stack developer on an insurance quoting web application targeted to medium and small businesses for a Fortune top 10 assurance company, refactoring an old Java monolith application into a micro-services-based one and creating an ad-hoc git flow to increase the maintainability and ease of deployment."
+        "I worked as a full-stack developer on an insurance quoting web application targeted to medium and small businesses for the UnitedHealth Group, a Fortune top 10 assurance company, refactoring an old Java monolith application into a micro-services-based one and creating an ad-hoc git flow to increase the maintainability and ease of deployment."
       ]
     },
     {
       "title": "Interactive YouTube Masthead for a Armani Code advertisement",
       "tech": "JavaScript, CSS, HTML, Canvas",
-      "description": ["I created a YouTube Masthead with an interactive video optimized for mobile and desktop."]
+      "description": [
+        "I created a YouTube Masthead with an interactive video optimized for mobile and desktop."
+      ]
     }
   ],
-  "side_projects": [
-    "Taught a NodeJs class at Turin University for two years",
-    "AI and Machine Learning practitioner (LLM, Reinforcement Learning)",
-    "Unity and HTML5 game development",
-    "Algorithms, coding and ML competitions",
-    "Physical computing with Arduino and Raspberry PI"
-  ],
-  "projects": [
-    "Taught a NodeJs laboratory at Turin University for two years.",
-    "Several car configurators for a top multinational automotive company",
-    "A management tool for massive live tournaments for a US gaming card company",
-    "Two multi-platform mobile applications",
-    "A real-time auction web application"
+  "sideProject": [
+    {
+      "title": "NodeJS Lab at Turin University",
+      "tech": "Node, Git, JavaScript, TypeScript",
+      "description": [
+        "I taught a NodeJs laboratory at Turin University for two years. The lessons were aimed at students with basic programming experience and covered several NodeJs aspects, such as use cases, async programming, and unit tests."
+      ]
+    },
+    {
+      "title": "A small scriptable keyboard created with a 3d Printer and an Arduino Micro Pro",
+      "tech": "C++, Arduino, 3dPrinting",
+      "urls": [
+        {
+          "url": "https://github.com/obiSerra/shortcut_keyboard",
+          "text": "Github Repository"
+        }
+      ]
+    },
+    {
+      "title": "A Khan's Soul -  A JavaScript game created for the Js13kGames competition",
+      "tech": "JavaScript, HTML5 Canvas, CSS",
+      "urls": [
+        {
+          "url": "https://js13kgames.com/entries/a-khans-soul",
+          "text": "Js13kGames entry"
+        }
+      ]
+    }
   ],
   "skills": [
     [
-      "Python, TypeScript, C#, JavaScript, Clojure, PHP",
+      "Python, TypeScript, C#, JavaScript, Clojure, C++, PHP",
       "FastApi, Pydantic, Asyncio, Pytorch, Pandas, Numpy, Scikit-learn, Matplotlib, Seaborn",
       "React, Redux, NodeJs, Express.js, Tailwind CSS",
+      "Raspberry PI, Arduino, 3D printing, Edge computing, IoT",
       "AWS Lambda, S3, CloudFormation, Cognito, APIGateway, AWS SQS, Google Cloud Provider",
       "DynamoDb, MongoDb, MySQL, PostgreSQL",
       "Git, bash, ssh, MacOS, Linux, Jenkins, Docker, RabbitMQ",
-      "Unit-Testing, TDD, E2E testing, Cypress, Jest",
-      "Agile and Scrum, PR-reviews"
+      "Unit-Testing, TDD, E2E testing, Cypress, Jest"
     ],
     [
       "Very strong communication skills",

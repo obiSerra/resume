@@ -1,0 +1,9 @@
+node_modules/
+output/*.pdf
+output/*.html
+output/*.css
+.git/
+.gitignore
+README.md
+AGENTS.md
+*.log
